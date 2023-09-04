@@ -1,5 +1,6 @@
 package com.driver.controllers;
 
+import com.driver.model.Booking;
 import com.driver.model.Hotel;
 import com.driver.model.User;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,13 @@ public class HotelService {
 
     public String getHotelWithMostFacilities() {
         return hotelRepo.getHotelWithMostFacilities();
+    }
+
+    public int bookARoom(Booking booking) {
+        return hotelRepo.bookARoom(booking);
+    }
+
+    public int getBookings(Integer aadharCard) {
+        return hotelRepo.getBookings(aadharCard);
     }
 }
